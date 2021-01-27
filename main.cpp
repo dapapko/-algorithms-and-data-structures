@@ -27,7 +27,7 @@ public:
     size_t size() const {
         return  binary_num_.size();
     }
-    //--------------------Converting--------------------------//
+//-------------------------Converting------------------------------------//
 
     BinaryStorage convert_to_binary_num(T num) {
         T mask;
@@ -191,9 +191,8 @@ public:
         }
     }
 
-};
 
-int main();
+};
 
 void check_range(int number) {
     if (number < numeric_limits<T>::min() || number > numeric_limits<T>::max()) {
@@ -223,8 +222,7 @@ Expression getNumberFromConsole() {
 int main() {
     while (true) {
         auto expression = getNumberFromConsole();
-        cout << "Check your expression: " << int(expression.number1) << expression.oper << int(expression.number2)
-             << endl;
+        cout << "Check your expression: " << int(expression.number1) << expression.oper << int(expression.number2)<< endl;
         auto res = expression.calculate();
         cout << "Result in binary is: " << res;
         cout << "Result in decimal:" << int(res.convert_to_decimal_num()) << endl;
